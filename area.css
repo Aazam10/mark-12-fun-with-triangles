@@ -29,7 +29,7 @@ body {
 .navigation {
     background-color: var(--primary-color);
     color: white;
-    padding: 0.5rem;
+    padding: 0.5rem 0rem;
     border-bottom-left-radius: 1rem;
 }
 .nav-pills {
