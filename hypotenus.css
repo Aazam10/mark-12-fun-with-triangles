@@ -74,6 +74,8 @@ body {
     text-align: center;
     border: 2px solid var(--primary-color);
     padding:1rem;
+    font-weight: bolder;
+    font-size: 2rem;
 }
 #btn-hypotenuse{
      display:block;
