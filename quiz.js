@@ -2,7 +2,7 @@ var quizFormRef= document.querySelector(".form");
 var btnRef=document.querySelector("#submit");
 var outputRef=document.querySelector("#result");
 
- var correctAnswers=['90°','Right Angled','One','85°']
+ var correctAnswers=['90°','Right Angled','One','85°','60°']
 
 function calculateScore(){
     var formData= new FormData(quizFormRef);
@@ -11,7 +11,7 @@ function calculateScore(){
     var index=0
     console.log(answerReceived)
     for (var answer of answerReceived){
-        console.log(answer);
+        
        if(answer===correctAnswers[index]){
            score=score+1;
        }
