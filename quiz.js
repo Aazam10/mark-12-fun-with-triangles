@@ -1,24 +1,22 @@
 var quizFormRef= document.querySelector(".form");
-var btnRef=document.querySelector("#submit");
+
 var outputRef=document.querySelector("#result");
 
  var correctAnswers=['90°','Right Angled','One','85°','60°']
 
-function calculateScore(){
-    var formData= new FormData(quizFormRef);
-    var answerReceived=formData.values();
-    var score=0;
-    var index=0
-    console.log(answerReceived)
-    for (var answer of answerReceived){
-        
-       if(answer===correctAnswers[index]){
-           score=score+1;
-       }
-       index=index+1;
-    }
-    outputRef.innerText=`Your Score is ${score}`;
-}
 
 
-btnRef.addEventListener("click",calculateScore);
+quizFormRef.addEventListener("submit",e=>{
+    e.preventDefault();
+    const userAnswer=[quizFormRef.question1.value,quizFormRef.question2.value,quizFormRef.question3.value,quizFormRef.question4.value,quizFormRef.question5.value];
+    let score=0;
+    userAnswer.forEach((answer,index) => {
+       
+        if (answer===correctAnswers[index]){
+            score+=1;
+            
+        }
+          
+    });
+     outputRef.innerText=`Your Score is ${score}`;
+})
